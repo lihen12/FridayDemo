@@ -32,4 +32,25 @@ public class CILabTest {
         test.setString("testing");
         assertEquals(true, test.detectCapitalUse());
     }
+
+    @Test
+    public void detectCapitalUseTest3() {
+        CILab test = new CILab();
+        test.setString("Testing");
+        assertEquals(true, test.detectCapitalUse());
+    }
+
+    @Test
+    public void detectCapitalUseTest4() {
+        CILab test = new CILab();
+        test.setString("TestinG");
+        assertEquals(false, test.detectCapitalUse());
+    }
+
+    @Test
+    public void detectCapitalUseTest5() {
+        CILab test = new CILab();
+        test.setString("TesTinG");
+        assertEquals(false, test.detectCapitalUse());
+    }
 }
